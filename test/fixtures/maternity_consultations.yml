@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  age_weeks: 1
+  age_days: 1
+  puerperio_revision: MyString
+  companion: MyString
+  risk: 1
+  mental_risk: false
+  citology: MyString
+
+two:
+  age_weeks: 1
+  age_days: 1
+  puerperio_revision: MyString
+  companion: MyString
+  risk: 1
+  mental_risk: false
+  citology: MyString

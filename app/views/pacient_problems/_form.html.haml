@@ -1,0 +1,12 @@
+= f.inputs do
+	= f.input :pacient_id, :as => :select, :collection => Pacient.all.map{|p| [p.name,p.id]}, |
+	 		:hint => i18n_pacient_problem_hint_str("pacient_id")
+	= f.input :ipcp_id, :as => :select, :collection => Pacient.all.map{|p| [p.name,p.id]}, | 
+			:hint => i18n_pacient_problem_hint_str("ipcp_id")
+	= f.input :start_date, :as => :string, :hint => i18n_pacient_problem_hint_str("start_date")
+	= f.input :end_date, :as => :string, :hint => i18n_pacient_problem_hint_str("end_date")
+
+:javascript
+	$j('#pacient_problem_start_date').datepicker({dateFormat: 'dd/mm/yy'});
+	$j('#pacient_problem_end_date').datepicker({dateFormat: 'dd/mm/yy'});
+

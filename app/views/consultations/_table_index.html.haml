@@ -1,0 +1,12 @@
+%table.table
+	%tr
+		%th.first= i18n_consultation_str("pacient_id")
+		%th= i18n_consultation_str("consult_date")
+		%th.last &nbsp;
+	- @consultations.each do |consultation|
+		%tr{:class => cycle("odd", "even")}
+			%td= link_to consultation.pacient.name, consultation_path(consultation)
+			%td= pretty_date(consultation.consult_date)
+			%td.last
+				= icon_show_consultation(consultation)
+				= icon_edit_consultation(consultation)

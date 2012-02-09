@@ -1,0 +1,19 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_families
+			%li= link_new_family
+			%li.active= link_show_family
+	.content
+		.inner
+			= render_element("process_number",@family.process_number)
+			= render_element("name",@family.name)
+			= render_element("family_type",@family.family_type)
+			= render_element("graffar",@family.graffar)
+			= render_element("duval",@family.duval)
+			= render_element("total_elements",@family.total_elements)
+			= render_element("is_total_el_diff",@family.is_total_el_diff)
+			= render_element("comments",@family.comments)
+			.wat-cf
+				= button_edit(edit_family_path(@family),"family")
+- content_for :sidebar, render(:partial => 'sidebar')

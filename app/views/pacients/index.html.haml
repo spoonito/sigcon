@@ -1,0 +1,24 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first.active= link_list_pacients
+			%li= link_new_pacient
+	.content
+		%h2.title= i18n_title_str("list_pacients")
+		.inner
+			%table.table
+				%tr
+					%th.first= i18n_pacient_str("name")
+					%th= i18n_pacient_str("family_id")
+					%th.last &nbsp;
+				- @pacients.each do |pacient|
+					%tr{:class => cycle("odd", "even")}
+						%td= link_to pacient.name, pacient_path(pacient)
+						%td= pacient.family.process_number
+						%td.last
+							= icon_show_pacient(pacient)
+							= icon_edit_pacient(pacient)
+			.actions-bar.wat-cf
+				.actions
+					= will_paginate @pacients
+- content_for :sidebar, render(:partial => 'sidebar')

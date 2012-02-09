@@ -1,0 +1,34 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", pfs_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_pfs_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      PfsConsultations
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.pfs_consultation.anticoncepcional", :default => t("activerecord.labels.anticoncepcional", :default => "Anticoncepcional"))
+          %th= t("web-app-theme.created_at", :default => "Created at")
+          %th.last &nbsp;
+        - @pfs_consultations.each do |pfs_consultation|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = pfs_consultation.id
+            %td
+              = link_to pfs_consultation.anticoncepcional, pfs_consultation_path(pfs_consultation)
+            %td
+              = pfs_consultation.created_at
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", pfs_consultation_path(pfs_consultation)
+              |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_pfs_consultation_path(pfs_consultation)} |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", pfs_consultation_path(pfs_consultation), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @pfs_consultations
+- content_for :sidebar, render(:partial => 'sidebar')

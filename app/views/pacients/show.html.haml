@@ -1,0 +1,22 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_pacients
+			%li= link_new_pacient
+			%li.active= link_show_pacient
+	.content
+		.inner
+			= render_element("name",@pacient.name)
+			= render_element("family_id",@pacient.family.process_number)
+			= render_element("birth",pretty_date(@pacient.birth))
+			= render_element("gender",i18n_word_str(@pacient.gender))
+			= render_element("pnv",@pacient.pnv)
+			= render_element("occupation",@pacient.occupation)
+			= render_element("work_status",@pacient.work_status)
+			= render_element("scholar_status",@pacient.scholar_status)
+			= render_element("social_status",@pacient.social_status)
+			= render_element("comments",@pacient.comments)
+			.wat-cf
+				= button_edit(edit_pacient_path(@pacient),"pacient")
+- content_for :sidebar, render(:partial => 'sidebar')
+

@@ -1,0 +1,13 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first.active= link_list_consultations
+			%li= link_new_consultation
+	.content
+		%h2.title= i18n_title_str("list_consultations")
+		.inner
+			= render :partial => "table_index"
+			.actions-bar.wat-cf
+				.actions
+					= will_paginate @consultations
+- content_for :sidebar, render(:partial => 'sidebar')

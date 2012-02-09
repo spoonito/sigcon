@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  family_id: 1
+  name: MyString
+  birth: 2011-12-09
+  gender: MyString
+  pnv: false
+  occupation: MyString
+  work_status: MyString
+  scholar_status: MyString
+  social_status: MyString
+  comments: MyText
+
+two:
+  family_id: 1
+  name: MyString
+  birth: 2011-12-09
+  gender: MyString
+  pnv: false
+  occupation: MyString
+  work_status: MyString
+  scholar_status: MyString
+  social_status: MyString
+  comments: MyText

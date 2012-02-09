@@ -1,0 +1,87 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", diabetes_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_diabetes_consultation_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", diabetes_consultation_path
+  .content
+    .inner
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.diabete_type", :default => t("activerecord.labels.diabete_type", :default => "Diabete type"))
+          \:
+        = @diabetes_consultation.diabete_type
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.hba_one_c", :default => t("activerecord.labels.hba_one_c", :default => "Hba one c"))
+          \:
+        = @diabetes_consultation.hba_one_c
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.imc", :default => t("activerecord.labels.imc", :default => "Imc"))
+          \:
+        = @diabetes_consultation.imc
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.ta_up", :default => t("activerecord.labels.ta_up", :default => "Ta up"))
+          \:
+        = @diabetes_consultation.ta_up
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.ta_lower", :default => t("activerecord.labels.ta_lower", :default => "Ta lower"))
+          \:
+        = @diabetes_consultation.ta_lower
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.microalbuminuria", :default => t("activerecord.labels.microalbuminuria", :default => "Microalbuminuria"))
+          \:
+        = @diabetes_consultation.microalbuminuria
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.colesterol", :default => t("activerecord.labels.colesterol", :default => "Colesterol"))
+          \:
+        = @diabetes_consultation.colesterol
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.monitoring_dm", :default => t("activerecord.labels.monitoring_dm", :default => "Monitoring dm"))
+          \:
+        = @diabetes_consultation.monitoring_dm
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.antiagregante", :default => t("activerecord.labels.antiagregante", :default => "Antiagregante"))
+          \:
+        = @diabetes_consultation.antiagregante
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.pabd", :default => t("activerecord.labels.pabd", :default => "Pabd"))
+          \:
+        = @diabetes_consultation.pabd
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.hdl", :default => t("activerecord.labels.hdl", :default => "Hdl"))
+          \:
+        = @diabetes_consultation.hdl
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.tricliceridos", :default => t("activerecord.labels.tricliceridos", :default => "Tricliceridos"))
+          \:
+        = @diabetes_consultation.tricliceridos
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.ofl", :default => t("activerecord.labels.ofl", :default => "Ofl"))
+          \:
+        = @diabetes_consultation.ofl
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.ecg", :default => t("activerecord.labels.ecg", :default => "Ecg"))
+          \:
+        = @diabetes_consultation.ecg
+      %p
+        %b
+          = t("activerecord.attributes.diabetes_consultation.diagnose_year", :default => t("activerecord.labels.diagnose_year", :default => "Diagnose year"))
+          \:
+        = @diabetes_consultation.diagnose_year
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_diabetes_consultation_path(@diabetes_consultation), :class => "button"
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), diabetes_consultation_path(@diabetes_consultation), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'sidebar')

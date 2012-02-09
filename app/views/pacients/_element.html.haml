@@ -1,0 +1,7 @@
+%p
+	%b
+		= i18n_pacient_str(attribute)+":"
+	- if value.nil? or value.blank?
+		= "-"
+	- else
+		= value

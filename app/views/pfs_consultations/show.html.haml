@@ -1,0 +1,37 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", pfs_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_pfs_consultation_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", pfs_consultation_path
+  .content
+    .inner
+      %p
+        %b
+          = t("activerecord.attributes.pfs_consultation.anticoncepcional", :default => t("activerecord.labels.anticoncepcional", :default => "Anticoncepcional"))
+          \:
+        = @pfs_consultation.anticoncepcional
+      %p
+        %b
+          = t("activerecord.attributes.pfs_consultation.citology", :default => t("activerecord.labels.citology", :default => "Citology"))
+          \:
+        = @pfs_consultation.citology
+      %p
+        %b
+          = t("activerecord.attributes.pfs_consultation.ths", :default => t("activerecord.labels.ths", :default => "Ths"))
+          \:
+        = @pfs_consultation.ths
+      %p
+        %b
+          = t("activerecord.attributes.pfs_consultation.monitoring_pf", :default => t("activerecord.labels.monitoring_pf", :default => "Monitoring pf"))
+          \:
+        = @pfs_consultation.monitoring_pf
+      %p
+        %b
+          = t("activerecord.attributes.pfs_consultation.monitoring_vc", :default => t("activerecord.labels.monitoring_vc", :default => "Monitoring vc"))
+          \:
+        = @pfs_consultation.monitoring_vc
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_pfs_consultation_path(@pfs_consultation), :class => "button"
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), pfs_consultation_path(@pfs_consultation), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'sidebar')

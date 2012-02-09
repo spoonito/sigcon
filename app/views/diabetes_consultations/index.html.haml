@@ -1,0 +1,34 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", diabetes_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_diabetes_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      DiabetesConsultations
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.diabetes_consultation.diabete_type", :default => t("activerecord.labels.diabete_type", :default => "Diabete_type"))
+          %th= t("web-app-theme.created_at", :default => "Created at")
+          %th.last &nbsp;
+        - @diabetes_consultations.each do |diabetes_consultation|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = diabetes_consultation.id
+            %td
+              = link_to diabetes_consultation.diabete_type, diabetes_consultation_path(diabetes_consultation)
+            %td
+              = diabetes_consultation.created_at
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", diabetes_consultation_path(diabetes_consultation)
+              |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_diabetes_consultation_path(diabetes_consultation)} |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", diabetes_consultation_path(diabetes_consultation), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @diabetes_consultations
+- content_for :sidebar, render(:partial => 'sidebar')

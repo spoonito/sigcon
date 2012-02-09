@@ -1,0 +1,10 @@
+= f.inputs do
+	= f.input :pacient_id, :as => :select, :collection => Pacient.all.map{|p| [p.name,p.id]}, |
+ 		:hint => i18n_consultation_hint_str("pacient_id")
+	= f.input :consultation_type_id, :as => :select, :collection => Pacient.all.map{|p| [p.name,p.id]}, | 
+		:hint => i18n_consultation_hint_str("consultation_type_id")
+	= f.input :consult_date, :as => :string, :hint => i18n_pacient_problem_hint_str("consult_date")
+	= f.input :is_consult, :as => :boolean, :hint => i18n_pacient_problem_hint_str("is_consult")
+
+:javascript
+	$j('#consultation_consult_date').datepicker({dateFormat: 'dd/mm/yy'});

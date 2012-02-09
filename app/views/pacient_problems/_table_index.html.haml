@@ -1,0 +1,14 @@
+%table.table
+	%tr
+		%th.first= i18n_pacient_problem_str("pacient_id")
+		%th= i18n_pacient_problem_str("start_date")
+		%th= i18n_pacient_problem_str("end_date")
+		%th.last &nbsp;
+	- @pacient_problems.each do |pacient_problem|
+		%tr{:class => cycle("odd", "even")}
+			%td= link_to pacient_problem.pacient.name, pacient_problem_path(pacient_problem)
+			%td= pretty_date(pacient_problem.start_date)
+			%td= pretty_date(pacient_problem.end_date)
+			%td.last
+				= icon_show_pacient_problem(pacient_problem)
+				= icon_edit_pacient_problem(pacient_problem)

@@ -1,0 +1,14 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", diabetes_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_diabetes_consultation_path
+      %li.active= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_diabetes_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.edit", :default => "Edit")
+      DiabetesConsultation
+    .inner
+      = form_for @diabetes_consultation, :url => diabetes_consultation_path(@diabetes_consultation), :html => { :class => :form } do |f|
+        = render :partial => "form", :locals => {:f => f}
+- content_for :sidebar, render(:partial => 'sidebar')

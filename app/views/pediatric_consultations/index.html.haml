@@ -1,0 +1,34 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", pediatric_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_pediatric_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      PediatricConsultations
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.pediatric_consultation.companion", :default => t("activerecord.labels.companion", :default => "Companion"))
+          %th= t("web-app-theme.created_at", :default => "Created at")
+          %th.last &nbsp;
+        - @pediatric_consultations.each do |pediatric_consultation|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = pediatric_consultation.id
+            %td
+              = link_to pediatric_consultation.companion, pediatric_consultation_path(pediatric_consultation)
+            %td
+              = pediatric_consultation.created_at
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", pediatric_consultation_path(pediatric_consultation)
+              |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_pediatric_consultation_path(pediatric_consultation)} |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", pediatric_consultation_path(pediatric_consultation), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @pediatric_consultations
+- content_for :sidebar, render(:partial => 'sidebar')

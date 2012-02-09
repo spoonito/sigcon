@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  anticoncepcional: MyString
+  citology: MyString
+  ths: MyString
+  monitoring_pf: MyString
+  monitoring_vc: MyString
+
+two:
+  anticoncepcional: MyString
+  citology: MyString
+  ths: MyString
+  monitoring_pf: MyString
+  monitoring_vc: MyString

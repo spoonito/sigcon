@@ -1,0 +1,19 @@
+= f.inputs do
+	= f.input :name, :hint => i18n_pacient_hint_str("name")
+	= f.input :family_id, :as => :select, :collection => Family.all.map{|family| [family.name,family.id]}, :hint => i18n_pacient_hint_str("family_id")
+	= f.input :birth, :as => :string, :hint => i18n_pacient_hint_str("birth")
+	= f.input :pnv, :as => :radio, :hint => i18n_pacient_hint_str("pnv"),  |
+			:collection => [[i18n_word_str("word_yes"),true],[i18n_word_str("word_no"),false]] |
+	-#
+	= f.input :gender, :as => :radio, :hint => i18n_pacient_hint_str("gender"),  |  
+		:collection => [[i18n_word_str("masculine"),"masculine"],[i18n_word_str("feminine"),"feminine"]] |
+	-#
+	= f.input :occupation, :hint => i18n_pacient_hint_str("occupation")
+	= f.input :scholar_status, :hint => i18n_pacient_hint_str("scholar_status")
+	= f.input :social_status, :as => :radio, :hint => i18n_pacient_hint_str("gender"),  |  
+		:collection => [[i18n_word_str("single"),"single"],[i18n_word_str("maried"),"maried"],[i18n_word_str("widower"),"widower"]] |
+	-#
+	= f.input :comments,  :hint => i18n_pacient_hint_str("comments")
+
+:javascript
+	$j('#pacient_birth').datepicker({dateFormat: 'yy/mm/dd'});

@@ -1,0 +1,15 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_pacients
+			%li.active= link_new_pacient
+	.content
+		%h2.title= i18n_title_str("new_pacient")
+		.inner
+			= semantic_form_for @pacient, :html => {:class => "form"} do |f|
+				= render :partial => "form", :locals => {:f => f}
+				.group.navform.wat-cf
+					= button_submit("create_pacient")
+					%span.text_button_padding= i18n_word_str("or")
+					= link_back(pacients_path)
+- content_for :sidebar, render(:partial => 'sidebar')

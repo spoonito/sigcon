@@ -1,0 +1,16 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_pacient_problems
+			%li= link_new_pacient_problem
+			%li.active= link_show_pacient_problem
+	.content
+		.inner
+			= render_element("pacient_id",@pacient_problem.pacient.name)
+			= render_element("ipcp_id",@pacient_problem.ipcp_id)
+			= render_element("start_date",pretty_date(@pacient_problem.start_date))
+			= render_element("end_date",pretty_date(@pacient_problem.end_date))
+			.wat-cf
+				= button_edit(edit_pacient_problem_path(@pacient_problem),"pacient_problem")
+- content_for :sidebar, render(:partial => 'sidebar')
+

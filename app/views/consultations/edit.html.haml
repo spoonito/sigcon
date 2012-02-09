@@ -1,0 +1,16 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_consultations
+			%li= link_new_consultation
+			%li.active= link_edit_consultation
+	.content
+		%h2.title= i18n_title_str("edit_consultation")
+		.inner
+			= semantic_form_for @consultation, :html => { :class => "form" } do |f|
+				= render :partial => "form", :locals => {:f => f}
+				.group.navform.wat-cf
+					= button_submit("update_consultation")
+					%span.text_button_padding= i18n_word_str("or")
+					= link_back(consultations_path)
+- content_for :sidebar, render(:partial => 'sidebar')

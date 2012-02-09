@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pacient_id: 1
+  type: MyString
+  consult_date: 2011-12-11
+  is_consult: false
+
+two:
+  pacient_id: 1
+  type: MyString
+  consult_date: 2011-12-11
+  is_consult: false

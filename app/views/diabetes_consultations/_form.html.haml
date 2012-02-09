@@ -1,0 +1,66 @@
+.group
+  = f.label :diabete_type, t("activerecord.attributes.diabetes_consultation.diabete_type", :default => "Diabete type"), :class => :label
+  = f.text_field :diabete_type, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :hba_one_c, t("activerecord.attributes.diabetes_consultation.hba_one_c", :default => "Hba one c"), :class => :label
+  = f.text_field :hba_one_c, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :imc, t("activerecord.attributes.diabetes_consultation.imc", :default => "Imc"), :class => :label
+  = f.text_field :imc, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :ta_up, t("activerecord.attributes.diabetes_consultation.ta_up", :default => "Ta up"), :class => :label
+  = f.text_field :ta_up, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :ta_lower, t("activerecord.attributes.diabetes_consultation.ta_lower", :default => "Ta lower"), :class => :label
+  = f.text_field :ta_lower, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :microalbuminuria, t("activerecord.attributes.diabetes_consultation.microalbuminuria", :default => "Microalbuminuria"), :class => :label
+  = f.text_field :microalbuminuria, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :colesterol, t("activerecord.attributes.diabetes_consultation.colesterol", :default => "Colesterol"), :class => :label
+  = f.text_field :colesterol, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :monitoring_dm, t("activerecord.attributes.diabetes_consultation.monitoring_dm", :default => "Monitoring dm"), :class => :label
+  = f.text_field :monitoring_dm, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :antiagregante, t("activerecord.attributes.diabetes_consultation.antiagregante", :default => "Antiagregante"), :class => :label
+  = f.text_field :antiagregante, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :pabd, t("activerecord.attributes.diabetes_consultation.pabd", :default => "Pabd"), :class => :label
+  = f.text_field :pabd, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :hdl, t("activerecord.attributes.diabetes_consultation.hdl", :default => "Hdl"), :class => :label
+  = f.text_field :hdl, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :tricliceridos, t("activerecord.attributes.diabetes_consultation.tricliceridos", :default => "Tricliceridos"), :class => :label
+  = f.text_field :tricliceridos, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :ofl, t("activerecord.attributes.diabetes_consultation.ofl", :default => "Ofl"), :class => :label
+  = f.text_field :ofl, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :ecg, t("activerecord.attributes.diabetes_consultation.ecg", :default => "Ecg"), :class => :label
+  = f.text_field :ecg, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :diagnose_year, t("activerecord.attributes.diabetes_consultation.diagnose_year", :default => "Diagnose year"), :class => :label
+  = f.text_field :diagnose_year, :class => 'text_field'
+  %span.description Ex: a simple text
+.group.navform.wat-cf
+  %button.button{:type => "submit"}
+    = image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}")
+    = t("web-app-theme.save", :default => "Save")
+  %span.text_button_padding= t("web-app-theme.or", :default => "or")
+  = link_to t("web-app-theme.cancel", :default => "Cancel"), diabetes_consultations_path, :class => "text_button_padding link_button"

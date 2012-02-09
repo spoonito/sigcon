@@ -1,0 +1,26 @@
+.group
+  = f.label :anticoncepcional, t("activerecord.attributes.pfs_consultation.anticoncepcional", :default => "Anticoncepcional"), :class => :label
+  = f.text_field :anticoncepcional, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :citology, t("activerecord.attributes.pfs_consultation.citology", :default => "Citology"), :class => :label
+  = f.text_field :citology, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :ths, t("activerecord.attributes.pfs_consultation.ths", :default => "Ths"), :class => :label
+  = f.text_field :ths, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :monitoring_pf, t("activerecord.attributes.pfs_consultation.monitoring_pf", :default => "Monitoring pf"), :class => :label
+  = f.text_field :monitoring_pf, :class => 'text_field'
+  %span.description Ex: a simple text
+.group
+  = f.label :monitoring_vc, t("activerecord.attributes.pfs_consultation.monitoring_vc", :default => "Monitoring vc"), :class => :label
+  = f.text_field :monitoring_vc, :class => 'text_field'
+  %span.description Ex: a simple text
+.group.navform.wat-cf
+  %button.button{:type => "submit"}
+    = image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}")
+    = t("web-app-theme.save", :default => "Save")
+  %span.text_button_padding= t("web-app-theme.or", :default => "or")
+  = link_to t("web-app-theme.cancel", :default => "Cancel"), pfs_consultations_path, :class => "text_button_padding link_button"

@@ -1,0 +1,34 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", maternity_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_maternity_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      MaternityConsultations
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.maternity_consultation.age_weeks", :default => t("activerecord.labels.age_weeks", :default => "Age_weeks"))
+          %th= t("web-app-theme.created_at", :default => "Created at")
+          %th.last &nbsp;
+        - @maternity_consultations.each do |maternity_consultation|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = maternity_consultation.id
+            %td
+              = link_to maternity_consultation.age_weeks, maternity_consultation_path(maternity_consultation)
+            %td
+              = maternity_consultation.created_at
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", maternity_consultation_path(maternity_consultation)
+              |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_maternity_consultation_path(maternity_consultation)} |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", maternity_consultation_path(maternity_consultation), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @maternity_consultations
+- content_for :sidebar, render(:partial => 'sidebar')

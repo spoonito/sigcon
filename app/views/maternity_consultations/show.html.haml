@@ -1,0 +1,47 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", maternity_consultations_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_maternity_consultation_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", maternity_consultation_path
+  .content
+    .inner
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.age_weeks", :default => t("activerecord.labels.age_weeks", :default => "Age weeks"))
+          \:
+        = @maternity_consultation.age_weeks
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.age_days", :default => t("activerecord.labels.age_days", :default => "Age days"))
+          \:
+        = @maternity_consultation.age_days
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.puerperio_revision", :default => t("activerecord.labels.puerperio_revision", :default => "Puerperio revision"))
+          \:
+        = @maternity_consultation.puerperio_revision
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.companion", :default => t("activerecord.labels.companion", :default => "Companion"))
+          \:
+        = @maternity_consultation.companion
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.risk", :default => t("activerecord.labels.risk", :default => "Risk"))
+          \:
+        = @maternity_consultation.risk
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.mental_risk", :default => t("activerecord.labels.mental_risk", :default => "Mental risk"))
+          \:
+        = @maternity_consultation.mental_risk
+      %p
+        %b
+          = t("activerecord.attributes.maternity_consultation.citology", :default => t("activerecord.labels.citology", :default => "Citology"))
+          \:
+        = @maternity_consultation.citology
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_maternity_consultation_path(@maternity_consultation), :class => "button"
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), maternity_consultation_path(@maternity_consultation), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'sidebar')

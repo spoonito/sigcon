@@ -1,0 +1,109 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt:
+  words:
+    or: ou
+    word_yes: Sim
+    word_no: Não
+    masculine: Masculino
+    feminine: Feminino
+    single: Solteiro
+    maried: Casado
+    widower: Viúvo
+  icons:
+    #show_*
+    show_family: Detalhe
+    show_pacient: Detalhe
+    show_pacient_problem: Detalhe
+    show_consultation: Detalhe
+    #edit_*
+    edit_family: Editar
+    edit_pacient: Editar
+    edit_pacient_problem: Editar
+    edit_consultation: Editar
+  links:
+    cancel: Cancelar
+    pacients: Pacientes
+    families: Famílias
+    pacient_problems: Problemas de pacientes
+    consultations: Consultas
+    #list_*
+    list_families: Todas
+    list_pacients: Todos
+    list_pacient_problems: Todos
+    list_consultations: Todas
+    #new_*
+    new_pacient_problem: Novo
+    new_family: Nova
+    new_pacient: Novo
+    new_consultation: Nova
+    #show_*
+    show_family: Detalhe
+    show_pacient: Detalhe
+    show_pacient_problem: Detalhe
+    show_consultation: Detalhe
+    #edit_*
+    edit_family: Editar
+    edit_pacient: Editar
+    edit_pacient_problem: Editar
+    edit_consultation: Editar
+  titles:
+    #list_*
+    list_families: Lista de famílias
+    list_pacients: Lista de pacientes
+    list_pacient_problems: Lista de problemas de paciente
+    list_consultations: Lista de consultas
+    #new_*
+    new_family: Nova família
+    new_pacient: Novo paciente
+    #edit_*
+    edit_family: Editar família
+    edit_pacient: Editar paciente
+    edit_consultation: Editar consulta
+  buttons:
+    #create_*
+    create_family: Submeter
+    create_pacient: Submeter
+    create_pacient_problem: Submeter
+    create_consultation: Submeter
+    #edit_*
+    edit_family: Editar
+    edit_pacient: Editar
+    edit_pacient_problem: Editar
+    edit_consultation: Editar
+    #update_*
+    update_family: Actualizar
+    update_pacient: Actualizar
+    update_pacient_problem: Actualizar
+    update_consultation: Actualizar
+  activerecord:
+    attributes:
+      family:
+        process_number: Número do processo
+        name: Nome
+        family_type: Tipo
+        graffar: Graffar
+        duval: Duval
+        total_elements: Número de elmentos
+        is_total_el_diff: is_total_el_diff
+        comments: Comentários
+      pacient:
+        name: Nome
+        family_id: Família
+        birth: Data de nascimento
+        gender: Género
+        occupation: Profissão
+        scholar_status: Estado escolar
+        work_status: Profissão
+        social_status: Estado civil
+        comments: Comentários
+      pacient_problem:
+        pacient_id: Paciente
+        start_date: Data de início
+        end_date: Data de fim
+      consultation:
+        pacient_id: Paciente
+        consult_date: Data
+        consultation_type_id: Tipo
+        is_consult: is_consult

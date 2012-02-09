@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  consultation_id: 1
+  ipcp_id: 1
+
+two:
+  consultation_id: 1
+  ipcp_id: 1

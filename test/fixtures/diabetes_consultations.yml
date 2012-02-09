@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  diabete_type: MyString
+  hba_one_c: 1
+  imc: 9.99
+  ta_up: 1
+  ta_lower: 1
+  microalbuminuria: MyString
+  colesterol: 1
+  monitoring_dm: MyString
+  antiagregante: MyString
+  pabd: 1
+  hdl: 1
+  tricliceridos: 1
+  ofl: MyString
+  ecg: MyString
+  diagnose_year: 1
+
+two:
+  diabete_type: MyString
+  hba_one_c: 1
+  imc: 9.99
+  ta_up: 1
+  ta_lower: 1
+  microalbuminuria: MyString
+  colesterol: 1
+  monitoring_dm: MyString
+  antiagregante: MyString
+  pabd: 1
+  hdl: 1
+  tricliceridos: 1
+  ofl: MyString
+  ecg: MyString
+  diagnose_year: 1

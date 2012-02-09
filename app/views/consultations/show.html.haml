@@ -1,0 +1,16 @@
+.block
+	.secondary-navigation
+		%ul.wat-cf
+			%li.first= link_list_consultations
+			%li= link_new_consultation
+			%li.active= link_show_consultation
+	.content
+		.inner
+			= render_element("pacient_id",@consultation.pacient.name)
+			= render_element("consultation_type_id",@consultation.consultation_type_id)
+			= render_element("consult_date",pretty_date(@consultation.consult_date))
+			= render_element("is_consult",@consultation.is_consult)
+			.wat-cf
+				= button_edit(edit_consultation_path(@consultation),"consultation")
+- content_for :sidebar, render(:partial => 'sidebar')
+

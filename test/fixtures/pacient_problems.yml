@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pacient_id: 1
+  ipcp_id: 1
+  start_date: 2011-12-11
+  end_date: 2011-12-11
+
+two:
+  pacient_id: 1
+  ipcp_id: 1
+  start_date: 2011-12-11
+  end_date: 2011-12-11

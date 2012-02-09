@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  process_number: 1
+  type: MyString
+  graffar: MyString
+  duval: MyString
+  total_elements: 1
+  is_total_el_diff: false
+  comments: MyText
+  name: MyString
+
+two:
+  process_number: 1
+  type: MyString
+  graffar: MyString
+  duval: MyString
+  total_elements: 1
+  is_total_el_diff: false
+  comments: MyText
+  name: MyString

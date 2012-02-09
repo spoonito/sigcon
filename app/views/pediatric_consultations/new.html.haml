@@ -1,0 +1,13 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", pediatric_consultations_path
+      %li.active= link_to "#{t("web-app-theme.new", :default => "New")}", new_pediatric_consultation_path
+  .content
+    %h2.title
+      = t("web-app-theme.new", :default => "New")
+      PediatricConsultation
+    .inner
+      = form_for :pediatric_consultation, :url => pediatric_consultations_path, :html => { :class => :form } do |f|
+        = render :partial => "form", :locals => {:f => f}
+- content_for :sidebar, render(:partial => 'sidebar')
